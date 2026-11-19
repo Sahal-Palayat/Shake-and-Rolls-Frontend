@@ -1,0 +1,75 @@
+/*
+ * App palette (every page except /home, which uses its own --lp-* tokens).
+ * Brand = orange. Re-theme by editing the base values below; components use tokens only.
+ */
+:root {
+  /* base (adjustable) */
+  --bg: #FFF9F3;        /* warm page background */
+  --primary: #F26B1D;   /* brand orange */
+  --secondary: #4A2F21; /* deep brown: headings, dark surfaces */
+  --text: #1F1712;      /* body text */
+
+  /* text that sits ON a base colour. Orange + white fails AA, so primary gets dark text. */
+  --on-primary: var(--text);
+  --on-secondary: #FFF9F3;
+
+  /* surfaces + lines */
+  --card: #FFFFFF;
+  --surface: color-mix(in srgb, var(--bg) 70%, var(--secondary) 5%);
+  --surface-raised: var(--card);
+  --border: #EEE3D8;
+  --border-strong: #D9C8B9;
+  --muted: #7A6A5E;
+  --primary-hover: color-mix(in srgb, var(--primary) 88%, #000);
+  --primary-tint: color-mix(in srgb, var(--primary) 12%, #fff);
+  --primary-ink: #B8470A;   /* orange for TEXT on light backgrounds (AA) */
+  --secondary-tint: color-mix(in srgb, var(--secondary) 8%, #fff);
+  --focus-ring: #C2410C;
+  --overlay: color-mix(in srgb, var(--text) 45%, transparent);
+
+  /* depth */
+  --shadow-sm: 0 1px 2px rgb(74 47 33 / .06), 0 1px 3px rgb(74 47 33 / .06);
+  --shadow-md: 0 4px 12px rgb(74 47 33 / .08), 0 2px 4px rgb(74 47 33 / .05);
+  --shadow-lg: 0 16px 40px rgb(74 47 33 / .18);
+
+  /* order status chips. Always paired with an icon + a label, never colour alone. */
+  --status-new-bg: var(--primary-tint);
+  --status-new-fg: var(--primary-ink);
+  --status-new-border: color-mix(in srgb, var(--primary) 35%, #fff);
+  --status-preparing-bg: #FFF1D6;
+  --status-preparing-fg: #8A5A00;
+  --status-preparing-border: #F3D58F;
+  --status-ready-bg: #DDF3E4;
+  --status-ready-fg: #17663A;
+  --status-ready-border: #A8DDB9;
+  --status-delayed-bg: #FDE2DF;
+  --status-delayed-fg: #A3231A;
+  --status-delayed-border: #F5B5AE;
+  --status-closed-bg: var(--surface);
+  --status-closed-fg: var(--muted);
+  --status-closed-border: var(--border);
+
+  /* veg / non-veg marks. Shape carries the meaning; colour is a bonus. */
+  --veg: #1F8A4C;
+  --nonveg: #B3261E;
+
+  /* type */
+  --font-display: var(--font-display-face, 'Arial Black', 'Helvetica Neue', Arial, sans-serif);
+  --font-body: var(--font-body-face, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif);
+  --font-heading: var(--font-body);
+
+  /* shape + type scale */
+  --radius: 14px;
+  --radius-sm: 10px;
+  --space: 0.5rem;
+  --font-size-base: 1rem;
+  --font-size-staff: 1.0625rem;
+  --font-size-staff-lg: 1.25rem;
+  --tap-min: 48px;
+
+  --font-size-control: var(--font-size-staff);
+  --font-size-control-lg: var(--font-size-staff-lg);
+}
+
+/* visually hidden, still read by screen readers */
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }

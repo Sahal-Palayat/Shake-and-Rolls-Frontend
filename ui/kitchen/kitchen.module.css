@@ -1,0 +1,45 @@
+.page { display:flex; flex-direction:column; gap:1rem; min-height:calc(100vh - 6rem); font-size:var(--font-size-staff); }
+.top { display:flex; align-items:center; justify-content:space-between; gap:.75rem; flex-wrap:wrap; }
+.h1 { margin:0; font-size:1.75rem; font-weight:800; letter-spacing:-.02em; color:var(--secondary); }
+.tools { display:flex; gap:.75rem; align-items:center; flex-wrap:wrap; }
+.conn { display:inline-flex; align-items:center; gap:.4rem; padding:.3rem .85rem; border-radius:999px; font-weight:700; font-size:.875rem; background:var(--surface); color:var(--muted); border:1px solid var(--border); }
+.connLive { background:var(--status-ready-bg); color:var(--status-ready-fg); border-color:var(--status-ready-border); }
+.connDown { background:var(--status-delayed-bg); color:var(--status-delayed-fg); border-color:var(--status-delayed-border); }
+.board { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; align-items:start; flex:1; }
+@media (max-width:1000px) { .board { grid-template-columns:1fr; } }
+.column { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:.75rem; display:flex; flex-direction:column; gap:.75rem; min-height:12rem; }
+.colHead { display:flex; align-items:center; justify-content:space-between; gap:.5rem; padding:.25rem .35rem .5rem; }
+.colTitle { margin:0; font-size:.9375rem; font-weight:800; color:var(--secondary); text-transform:uppercase; letter-spacing:.08em; }
+.count { min-width:2rem; height:2rem; padding:0 .5rem; display:inline-flex; align-items:center; justify-content:center; border-radius:999px; background:var(--primary); color:var(--on-primary); font-weight:800; font-size:.9375rem; }
+.empty { color:var(--muted); text-align:center; padding:2rem 0; }
+.cards { display:flex; flex-direction:column; gap:.75rem; }
+
+.card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow-sm); padding:1rem; display:flex; flex-direction:column; gap:.7rem; }
+.cardDelayed { border-color:#E8877E; box-shadow:0 0 0 3px #FDE2DF, var(--shadow-sm); }
+.cardTop { display:flex; justify-content:space-between; align-items:center; gap:.5rem; flex-wrap:wrap; }
+.num { font-size:var(--font-size-staff-lg); font-weight:800; letter-spacing:-.01em; color:var(--secondary); }
+.age { color:var(--muted); font-weight:600; font-size:.9375rem; }
+.who { font-weight:600; }
+.addr { color:var(--muted); font-size:.9375rem; }
+.lines { list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.5rem; border-top:1px solid var(--border); padding-top:.7rem; }
+.line { font-weight:700; }
+.opts { display:block; font-weight:500; color:var(--muted); font-size:.9375rem; }
+.lineNote { display:block; font-weight:600; font-size:.9375rem; color:var(--primary-ink); }
+.custNote { background:var(--primary-tint); border-left:4px solid var(--primary); border-radius:var(--radius-sm); padding:.6rem .85rem; font-weight:700; font-size:1.0625rem; }
+.custNoteLabel { display:block; font-size:.75rem; text-transform:uppercase; letter-spacing:.08em; color:var(--primary-ink); }
+.meta { display:flex; justify-content:space-between; gap:.5rem; font-weight:600; flex-wrap:wrap; }
+.btns { display:flex; gap:.5rem; flex-wrap:wrap; }
+.btns > * { flex:1 1 8rem; }
+.reasonWrap { display:flex; flex-direction:column; gap:.75rem; }
+
+.panelOverlay { position:fixed; inset:0; background:var(--overlay); backdrop-filter:blur(3px); z-index:40; display:flex; justify-content:flex-end; }
+.panel { width:min(30rem,100%); height:100%; background:var(--card); box-shadow:var(--shadow-lg); padding:1.25rem; display:flex; flex-direction:column; gap:.75rem; overflow:hidden; }
+.panelList { list-style:none; margin:0; padding:0; overflow:auto; display:flex; flex-direction:column; gap:.5rem; flex:1; }
+.avRow { display:flex; align-items:center; justify-content:space-between; gap:.5rem; padding:.55rem .9rem; border:1px solid var(--border); border-radius:var(--radius-sm); background:var(--card); }
+.avOff { background:var(--surface); border-style:dashed; }
+.avName { font-weight:700; }
+.muted { color:var(--muted); font-size:.9375rem; }
+
+/* delivery vs pickup tag */
+.fulfil { font-weight:700; font-size:.8125rem; padding:.15rem .7rem; border:1px solid var(--border-strong); border-radius:999px; background:var(--card); color:var(--secondary); }
+.fulfilPickup { background:var(--secondary); color:var(--on-secondary); border-color:var(--secondary); }

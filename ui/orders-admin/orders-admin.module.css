@@ -1,0 +1,28 @@
+.page { display:flex; flex-direction:column; gap:1.25rem; font-size:var(--font-size-staff); }
+.top { display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap; }
+.h1 { margin:0; font-size:1.75rem; font-weight:800; letter-spacing:-.02em; color:var(--secondary); }
+.filters { display:grid; grid-template-columns:repeat(auto-fit,minmax(11rem,1fr)); gap:.75rem; padding:1rem; background:var(--card); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow-sm); align-items:end; }
+.tableWrap { overflow-x:auto; border:1px solid var(--border); border-radius:var(--radius); background:var(--card); box-shadow:var(--shadow-sm); }
+.table { width:100%; border-collapse:collapse; }
+.table th { text-align:left; padding:.75rem 1rem; background:var(--surface); border-bottom:1px solid var(--border); color:var(--muted); font-size:.75rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; white-space:nowrap; }
+.table td { padding:.8rem 1rem; border-bottom:1px solid var(--border); vertical-align:middle; }
+.table tbody tr { transition:background .1s; }
+.table tbody tr:hover { background:var(--primary-tint); }
+.table tbody tr:last-child td { border-bottom:0; }
+.num { font-weight:800; color:var(--secondary); }
+.muted { color:var(--muted); font-size:.9375rem; }
+.empty { padding:2.5rem; text-align:center; color:var(--muted); }
+.section { display:flex; flex-direction:column; gap:.6rem; padding:1rem; border:1px solid var(--border); border-radius:var(--radius); background:var(--surface); }
+.h2 { margin:0; font-size:.75rem; font-weight:700; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; }
+.info { display:grid; grid-template-columns:max-content 1fr; gap:.3rem 1rem; margin:0; }
+.info dt { color:var(--muted); font-weight:500; }
+.info dd { margin:0; font-weight:600; }
+.list { list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.4rem; }
+.lineRow { display:flex; justify-content:space-between; gap:1rem; }
+.note { background:var(--primary-tint); border-left:4px solid var(--primary); border-radius:var(--radius-sm); padding:.6rem .85rem; font-weight:600; }
+.btns { display:flex; gap:.5rem; flex-wrap:wrap; }
+.inline { display:grid; grid-template-columns:1fr auto; gap:.75rem; align-items:end; }
+@media (max-width:560px) { .inline { grid-template-columns:1fr; } }
+.logRow { font-size:.9375rem; color:var(--muted); }
+.staffForm { display:flex; flex-direction:column; gap:1rem; }
+.rowBtns { display:flex; gap:.5rem; }

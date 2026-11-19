@@ -1,0 +1,17 @@
+/* Customer screens: normal text sizes. */
+.root { --font-size-control:1rem; --font-size-control-lg:1.25rem; min-height:100vh; display:flex; flex-direction:column; background:var(--bg); color:var(--text); font-family:var(--font-body); font-size:var(--font-size-base); line-height:1.5; }
+.header { position:sticky; top:0; z-index:40; background:color-mix(in srgb, var(--card) 88%, transparent); backdrop-filter:saturate(1.4) blur(10px); border-bottom:1px solid var(--border); }
+.headerInner { max-width:72rem; margin:0 auto; padding:.6rem 1rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+.brandBlock { display:flex; flex-direction:column; min-width:0; }
+.brand { font-family:var(--font-heading); font-weight:800; font-size:1.375rem; letter-spacing:-.02em; line-height:1.1; color:var(--primary-ink); text-decoration:none; }
+.brand:focus-visible, .navLink:focus-visible, .signOut:focus-visible { outline:3px solid color-mix(in srgb, var(--focus-ring) 45%, transparent); outline-offset:3px; border-radius:8px; }
+.tagline { font-size:.8125rem; color:var(--muted); }
+.right { display:flex; align-items:center; gap:.5rem; flex-wrap:wrap; justify-content:flex-end; }
+.nav { display:flex; gap:.25rem; }
+.navLink { min-height:40px; display:inline-flex; align-items:center; padding:0 .95rem; border-radius:999px; color:var(--secondary); text-decoration:none; font-weight:600; font-size:.9375rem; transition:background .15s; }
+.navLink:hover { background:var(--primary-tint); }
+.navActive { background:var(--primary); color:var(--on-primary); }
+.navActive:hover { background:var(--primary); }
+.signOut { min-height:40px; padding:0 .75rem; background:none; border:none; font:inherit; font-size:.9375rem; font-weight:600; color:var(--muted); cursor:pointer; border-radius:999px; }
+.signOut:hover { color:var(--text); background:var(--surface); }
+.main { flex:1; width:100%; max-width:72rem; margin:0 auto; }

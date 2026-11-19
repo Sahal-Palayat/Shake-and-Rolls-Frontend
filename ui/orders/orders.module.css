@@ -1,0 +1,65 @@
+.page { padding:1.5rem 1rem 2rem; display:flex; flex-direction:column; gap:1.25rem; max-width:44rem; margin:0 auto; width:100%; }
+.back { align-self:flex-start; min-height:40px; padding:0 .75rem 0 .25rem; background:none; border:none; border-radius:999px; font:inherit; font-weight:600; color:var(--primary-ink); cursor:pointer; }
+.back:hover { background:var(--primary-tint); }
+.back:focus-visible { outline:3px solid color-mix(in srgb, var(--focus-ring) 45%, transparent); outline-offset:3px; }
+.titleRow { display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap; }
+.title { margin:0; font-family:var(--font-heading); font-weight:800; font-size:1.75rem; letter-spacing:-.02em; color:var(--secondary); }
+.live { display:inline-flex; align-items:center; gap:.4rem; font-weight:600; font-size:.8125rem; color:var(--muted); padding:.25rem .7rem; border-radius:999px; background:var(--surface); }
+.liveDot { width:.5rem; height:.5rem; border-radius:50%; background:var(--border-strong); }
+.liveOn { color:var(--status-ready-fg); background:var(--status-ready-bg); }
+.liveOn .liveDot { background:#1F8A4C; box-shadow:0 0 0 3px color-mix(in srgb, #1F8A4C 25%, transparent); }
+.headline { margin:0; font-family:var(--font-heading); font-weight:800; font-size:1.5rem; letter-spacing:-.02em; line-height:1.25; color:var(--secondary); }
+.detail { margin:.25rem 0 0; color:var(--muted); font-size:1rem; }
+.status { display:flex; flex-direction:column; gap:.5rem; padding:1.25rem; background:linear-gradient(135deg, var(--primary-tint), var(--card)); border:1px solid color-mix(in srgb, var(--primary) 30%, #fff); border-radius:var(--radius); box-shadow:var(--shadow-sm); }
+
+/* progress: vertical timeline */
+.steps { list-style:none; margin:0; padding:.25rem 0; display:flex; flex-direction:column; }
+.step { display:grid; grid-template-columns:1.75rem 1fr auto; gap:.75rem; align-items:start; padding:.5rem 0; position:relative; }
+.step:not(:last-child)::before { content:''; position:absolute; left:.8rem; top:2.1rem; bottom:-.5rem; border-left:2px solid var(--border-strong); }
+.stepDone:not(:last-child)::before { border-left-color:var(--primary); }
+.mark { width:1.65rem; height:1.65rem; border-radius:50%; border:2px solid var(--border-strong); display:flex; align-items:center; justify-content:center; font-size:.8125rem; font-weight:800; background:var(--card); color:var(--muted); }
+.stepDone .mark { background:var(--primary); border-color:var(--primary); color:var(--on-primary); }
+.stepCurrent .mark { background:var(--card); border-color:var(--primary); color:var(--primary-ink); box-shadow:0 0 0 4px color-mix(in srgb, var(--primary) 22%, transparent); }
+.stepTodo .mark { border-style:dashed; }
+.stepLabel { font-weight:500; padding-top:.1rem; }
+.stepCurrent .stepLabel { font-weight:800; color:var(--secondary); }
+.stepTodo .stepLabel { color:var(--muted); }
+.stepTime { color:var(--muted); font-size:.8125rem; padding-top:.25rem; font-variant-numeric:tabular-nums; }
+
+.ticket { padding:1.25rem; background:var(--card); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow-sm); display:flex; flex-direction:column; gap:.5rem; }
+.ticketTitle { margin:0 0 .25rem; font-family:var(--font-heading); font-weight:700; font-size:1.125rem; color:var(--secondary); }
+.info { margin:0; display:flex; flex-direction:column; gap:.4rem; }
+.infoRow { display:grid; grid-template-columns:7rem 1fr; gap:.75rem; }
+.infoRow dt { color:var(--muted); font-weight:500; }
+.infoRow dd { margin:0; min-width:0; overflow-wrap:anywhere; }
+.items { list-style:none; margin:0; padding:0; }
+.item { display:flex; justify-content:space-between; gap:1rem; padding:.65rem 0; border-bottom:1px solid var(--border); }
+.itemText { display:flex; flex-direction:column; min-width:0; }
+.itemName { font-weight:600; }
+.itemOpts, .itemNote { color:var(--muted); font-size:.875rem; }
+.itemNote { font-style:italic; }
+.itemPrice { font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; }
+.rows { margin:0; display:flex; flex-direction:column; gap:.4rem; padding-top:.25rem; color:var(--muted); }
+.row { display:flex; justify-content:space-between; gap:1rem; font-variant-numeric:tabular-nums; }
+.rowValue { margin:0; color:var(--text); }
+.rowStrong { font-weight:800; font-size:1.1875rem; padding-top:.6rem; margin-top:.2rem; border-top:1px solid var(--border); color:var(--secondary); }
+.rowStrong .rowValue { color:var(--secondary); }
+.actions { display:flex; gap:.75rem; flex-wrap:wrap; padding-bottom:2rem; }
+
+/* history */
+.list { list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:1rem; }
+.card { display:flex; flex-direction:column; gap:.6rem; padding:1.1rem 1.25rem; background:var(--card); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow-sm); transition:box-shadow .15s, border-color .15s; }
+.card:hover { box-shadow:var(--shadow-md); border-color:var(--border-strong); }
+.cardTop { display:flex; justify-content:space-between; align-items:center; gap:.5rem; flex-wrap:wrap; }
+.cardOpen { background:none; border:none; padding:0; font:inherit; font-weight:800; font-size:1.125rem; color:var(--secondary); cursor:pointer; text-align:left; }
+.cardOpen:hover { color:var(--primary-ink); text-decoration:underline; }
+.cardOpen:focus-visible { outline:3px solid color-mix(in srgb, var(--focus-ring) 45%, transparent); outline-offset:3px; border-radius:6px; }
+.cardMeta { color:var(--muted); font-size:.875rem; display:flex; gap:.75rem; flex-wrap:wrap; }
+.cardSummary { margin:0; overflow-wrap:anywhere; }
+.cardBottom { display:flex; align-items:center; justify-content:space-between; gap:.75rem; flex-wrap:wrap; padding-top:.5rem; border-top:1px solid var(--border); }
+.cardTotal { font-weight:800; font-variant-numeric:tabular-nums; color:var(--secondary); }
+.skeleton { height:6.5rem; border-radius:var(--radius); background:linear-gradient(90deg, var(--surface) 25%, var(--primary-tint) 50%, var(--surface) 75%); background-size:200% 100%; animation:shimmer 1.4s linear infinite; }
+@keyframes shimmer { to { background-position:-200% 0; } }
+.center { text-align:center; padding:3rem 1rem; display:flex; flex-direction:column; gap:1rem; align-items:center; }
+.centerText { margin:0; font-size:1.125rem; color:var(--muted); }
+@media (prefers-reduced-motion: reduce) { .skeleton { animation:none; } }
